@@ -4,156 +4,545 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Nathaniel Power</title>
+    <title>Nathaniel Power | Computer Programmer</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
-<body id="main">
-    <header>
-        <h1>Nathaniel Power</h1>
-        <h2>Computer Programmer</h2>
-        <nav>
-            <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">LinkedIn</a></li>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">NP</a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#hobbies" class="nav-link">Hobbies</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+                <li class="nav-item"><a href="#resume" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="#awards" class="nav-link">Awards</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
 
-    <button id="sidebarBtn" class="openSidebarBtn" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
-    <div id="navSidebar" class="sidebar">
-        <a href="#">About Me</a>
-        <a href="#">Skills</a>
-        <a href="#">Awards and Recognition</a>
-        <a href="#">Examples of Work</a>
-    </div>
-
-    <section id="aboutMe">
-        <h1>About Me</h1>
-        <p>I'm a Computer Programming student currently studying at St. Clair College. I've found an interest in
-            computing ever since I got my first exposure to coding back when I was only a kid messing around with assets
-            in Roblox Studio. In grade 10 I took my first Computer Science class, and that would mark the start of my
-            journey as a programmer. Since then, I've consistently been involved in learning and developing,
-            pushing myself to learn as much as possible.
-        </p>
-    </section>
-
-    <section id="skills">
-        <h1>Skills</h1>
-        <p>During my time learning about computer programming, I have gained much experience.</p>
-
-        <h3>Languages</h3>
-        <ul>
-            <li>C#</li>
-            <li>CSS</li>
-            <li>HTML</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>JSON</li>
-            <li>Lua</li>
-            <li>Python</li>
-            <li>PHP</li>
-            <li>SQL</li>
-            <li>XML</li>
-        </ul>
-
-        <h3>Software and Tools</h3>
-        <ul>
-            <li>Git/GitHub</li>
-            <li>MySQL</li>
-            <li>Eclipse IDE</li>
-            <li>IntelliJ IDEA Community Edition</li>
-            <li>PhpStorm</li>
-            <li>VSCode</li>
-            <li>Linux</li>
-        </ul>
-    </section>
-
-    <section id="awardsAndRecognition">
-        <h1>Awards and Recognition</h1>
-
-        <section>
-            <h2>University of Windsor Annual Secondary School Programming Competition</h2>
-
-            <picture>
-                <source media="(width >= 799px)" srcset="images/uw_logo_reg.webp" />
-                <img src="images/uw_logo_small.webp" alt="University of Windsor logo">
-            </picture>
-
-            <p>I have participated in the 18th and 19th Annual Secondary School Programming Competition (SSPC). The SSPC
-                was a test of teamwork and communication, with each competitor being put into teams of three and given
-                the goal of creating functional and optimized solutions in code to solve a set of problems.</p>
-            <p>In my school, each competitor was invited individually by teachers who saw potential in them. Both in
-                grade 11 and 12, I would be selected to represent my school.</p>
-        </section>
-
-        <section>
-            <h2>Canadian Computing Competition</h2>
-
-            <picture>
-                <source media="(width >= 799px)" srcset="images/cemc_logo_reg.png" />
-                <img src="images/cemc_logo_small.png" alt="Center for Education in Mathematics and Computing logo">
-            </picture>
-
-            <p>The Canadian Computing Competition (CCC) is held by the University of Waterloo annually. I participated
-                in 2025. Unlike the SSPC, the CCC is hosted online, giving competitors the opportunity to compete from
-                their own class. This put a focus on individual skill, as we were expected to work alone without any
-                aid.</p>
-        </section>
-    </section>
-
-    <section id="projects">
-        <h1>Examples of Work</h1>
-
-        <details id="sabot">
-            <summary>SABOT</summary>
-            <div id="gallery">
-                <img src="images/sabot_tank_firing.png">
-                <img src="images/sabot_convoy.png">
-                <img src="images/sabot_burning_bmp.png">
-                <img src="images/sabot_tank_model.png">
-            </div>
-            <p>In grade 11, having just finished my first computer science class, I found myself wanting to explore the
-                topic further, outside class. Being already comfortable with it, I found myself opening Roblox Studio
-                and creating a new project, which would be the culmination of my knowledge in computer science at the
-                time.</p>
-            <p>SABOT is a project where I am able to test my knowledge and apply it in a way where I can combine my
-                two interests: coding and history. Along with this, the project pushed me to develop my skills in
-                multiple areas. Most, if not all of the game assets were created by me. Models and animations were
-                done by myself using the tools Roblox Studio had to offer along with third-party software such as
-                Blender.</p>
-            <p>Throughout the development of SABOT, I have accomplished many things that I would have previously thought
-                impossible for someone of my skill level. Autonomos navigation, AI vehicle behaviour, an in-depth
-                ballistics simulator that calculated projectile motion and impact physics in real time, advanced
-                movement and vehicle interaction systems, and so on. When I first started SABOT, I wouldn't have thought
-                I could accomplish such things. Looking back at the project, it's clear how much I've grown since I
-                first started over a year ago.</p>
-        </details>
-
-        <details id="godot">
-            <summary>Godot Game</summary>
-            <div id="gallery">
-                <img src="images/godot_animating.png">
-                <img src="images/godot_thinker.png">
-            </div>
-            <p>While work continued on SABOT, I found myself feeling limited by the boundaries of the Roblox engine.
-                Along with this, as SABOT grew larger in size and complexity, I found myself becoming more wary of
-                Roblox Studio. Due to being based off the Roblox platform, much of the project was built off of
-                pre-existing systems that were built into Roblox Studio. However, my major concern was the fact that
-                Roblox Studio, and by extention, anything made using it, was essentially under the control of Roblox.
-                Assets are moderated, and projects are reliant on you being able to access your Roblox account. If for
-                whatever reason you were hacked, banned, or the Roblox servers went down, your work would go with it.
-                I wanted more freedom, a bigger challenge for myself where I can put to use all the things I have
-                learned with a tool that offers greater control over the project.
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <p class="hero-greeting fade-in">Hello, I'm</p>
+            <h1 class="hero-title fade-in">Nathaniel Power</h1>
+            <h2 class="hero-subtitle fade-in">Computer Programmer</h2>
+            <p class="hero-description fade-in">
+                Passionate about creating innovative solutions through code.
+                Exploring the intersection of technology and creativity.
             </p>
-            <p>I found myself gravitating to Godot. It's a capable game engine that many games I know utilize, however
-                its main attraction is that its open source. This means that while some software come as-is, Godot
-                allows anyone to modify it to suit their needs. Godot also provides .NET support, which lets me code in
-                C#.</p>
-            <a href="https://github.com/natrapdev/workspacenotworkdeck">GitHub</a>
-        </details>
+            <div class="hero-buttons fade-in">
+                <a href="#work" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
     </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content fade-in">
+                <div class="about-text">
+                    <p>
+                        I'm a Computer Programming student currently studying at St. Clair College. I've found an
+                        interest in
+                        computing ever since I got my first exposure to coding back when I was only a kid messing around
+                        with assets
+                        in Roblox Studio. In grade 10 I took my first Computer Science class, and that would mark the
+                        start of my
+                        journey as a programmer. Since then, I've consistently been involved in learning and developing,
+                        pushing myself to learn as much as possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Hobbies</h2>
+            <p class="section-subtitle fade-in">My interests and personal projects</p>
+
+            <div class="hobbies-grid fade-in">
+                <!-- Photography -->
+                <details class="hobby-card" open>
+                    <summary class="hobby-summary">
+                        <div class="hobby-icon">📷</div>
+                        <div class="hobby-info">
+                            <h3 class="hobby-title">Photography</h3>
+                            <p class="hobby-description">Capturing moments and exploring the world through my lens</p>
+                        </div>
+                    </summary>
+                    <div class="hobby-content">
+                        <div class="packed-gallery">
+                            <img src="assets/images/photography/airshow.jpg" alt="Airshow photography" loading="lazy">
+                            <img src="assets/images/photography/building_uk.JPG" alt="Building in UK" loading="lazy">
+                            <img src="assets/images/photography/backyard.jpg" alt="Backyard view" loading="lazy">
+                            <img src="assets/images/photography/cathedral_outside.JPG" alt="Cathedral exterior"
+                                loading="lazy">
+                            <img src="assets/images/photography/cathedral_ceiling.JPG" alt="Cathedral ceiling"
+                                loading="lazy">
+                            <img src="assets/images/photography/cathedral_street.JPG" alt="Cathedral street view"
+                                loading="lazy">
+                            <img src="assets/images/photography/cf18.jpg" alt="CF18 aircraft" loading="lazy">
+                            <img src="assets/images/photography/cornfield.jpg" alt="Cornfield" loading="lazy">
+                            <img src="assets/images/photography/cf18s.jpg" alt="CF18 squadron" loading="lazy">
+                            <img src="assets/images/photography/f22.jpg" alt="F22 aircraft" loading="lazy">
+                            <img src="assets/images/photography/lancaster.JPG" alt="Lancaster bomber" loading="lazy">
+                            <img src="assets/images/photography/office_at_night.JPG" alt="Office at night"
+                                loading="lazy">
+                            <img src="assets/images/photography/old_school_exterior.jpg" alt="Old school exterior"
+                                loading="lazy">
+                            <img src="assets/images/photography/water_stream.jpg" alt="Water stream" loading="lazy">
+                            <img src="assets/images/photography/toronto_train.jpg" alt="Toronto train" loading="lazy">
+                            <img src="assets/images/photography/old_school_interior.jpg" alt="Old school interior"
+                                loading="lazy">
+                            <img src="assets/images/photography/rocky_creek.jpg" alt="Rocky creek" loading="lazy">
+                            <img src="assets/images/photography/towerbridge.JPG" alt="Tower Bridge London"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </details>
+
+                <!-- SABOT Game -->
+                <details class="hobby-card">
+                    <summary class="hobby-summary">
+                        <div class="hobby-icon">🎮</div>
+                        <div class="hobby-info">
+                            <h3 class="hobby-title">SABOT</h3>
+                            <p class="hobby-description">A historical tank combat game built in Roblox Studio</p>
+                        </div>
+                    </summary>
+                    <div class="hobby-content">
+                        <p class="hobby-text">
+                            In grade 11, having just finished my first computer science class, I found myself wanting to
+                            explore the
+                            topic further, outside class. Being already comfortable with it, I found myself opening
+                            Roblox Studio
+                            and creating a new project, which would be the culmination of my knowledge in computer
+                            science at the
+                            time.
+                        </p>
+                        <p class="hobby-text">
+                            SABOT is a project where I am able to test my knowledge and apply it in a way where I can
+                            combine my
+                            two interests: coding and history. Along with this, the project pushed me to develop my
+                            skills in
+                            multiple areas. Most, if not all of the game assets were created by me. Models and
+                            animations were
+                            done by myself using the tools Roblox Studio had to offer along with third-party software
+                            such as
+                            Blender.
+                        </p>
+                        <p class="hobby-text">
+                            Throughout the development of SABOT, I have accomplished many things that I would have
+                            previously thought
+                            impossible for someone of my skill level. Autonomous navigation, AI vehicle behaviour, an
+                            in-depth
+                            ballistics simulator that calculated projectile motion and impact physics in real time,
+                            advanced
+                            movement and vehicle interaction systems, and so on. When I first started SABOT, I wouldn't
+                            have thought
+                            I could accomplish such things. Looking back at the project, it's clear how much I've grown
+                            since I
+                            first started over a year ago.
+                        </p>
+                        <div class="hobby-tags">
+                            <span class="tag">Lua</span>
+                            <span class="tag">Roblox Studio</span>
+                            <span class="tag">Blender</span>
+                            <span class="tag">3D Modeling</span>
+                            <span class="tag">Game Development</span>
+                        </div>
+                        <div class="packed-gallery">
+                            <img src="assets/images/gamedev/sabot_tank_firing.png" alt="Tank firing" loading="lazy">
+                            <img src="assets/images/gamedev/sabot_convoy.png" alt="Convoy" loading="lazy">
+                            <img src="assets/images/gamedev/sabot_burning_bmp.png" alt="Burning BMP" loading="lazy">
+                            <img src="assets/images/gamedev/sabot_tank_model.png" alt="Tank model" loading="lazy">
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Godot Game -->
+                <details class="hobby-card">
+                    <summary class="hobby-summary">
+                        <div class="hobby-icon">🚀</div>
+                        <div class="hobby-info">
+                            <h3 class="hobby-title">Godot Game Project</h3>
+                            <p class="hobby-description">Exploring game development with the open-source Godot engine
+                            </p>
+                        </div>
+                    </summary>
+                    <div class="hobby-content">
+                        <p class="hobby-text">
+                            While work continued on SABOT, I found myself feeling limited by the boundaries of the
+                            Roblox engine.
+                            Along with this, as SABOT grew larger in size and complexity, I found myself becoming more
+                            wary of
+                            Roblox Studio. Due to being based off the Roblox platform, much of the project was built off
+                            of
+                            pre-existing systems that were built into Roblox Studio. However, my major concern was the
+                            fact that
+                            Roblox Studio, and by extension, anything made using it, was essentially under the control
+                            of Roblox.
+                            Assets are moderated, and projects are reliant on you being able to access your Roblox
+                            account. If for
+                            whatever reason you were hacked, banned, or the Roblox servers went down, your work would go
+                            with it.
+                            I wanted more freedom, a bigger challenge for myself where I can put to use all the things I
+                            have
+                            learned with a tool that offers greater control over the project.
+                        </p>
+                        <p class="hobby-text">
+                            I found myself gravitating to Godot. It's a capable game engine that many games I know
+                            utilize, however
+                            its main attraction is that it's open source. This means that while some software come
+                            as-is, Godot
+                            allows anyone to modify it to suit their needs. Godot also provides .NET support, which lets
+                            me code in
+                            C#.
+                        </p>
+                        <div class="hobby-tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">Godot</span>
+                            <span class="tag">Game Dev</span>
+                            <span class="tag">Open Source</span>
+                        </div>
+                        <a href="https://github.com/natrapdev/workspacenotworkdeck" class="hobby-link" target="_blank"
+                            rel="noopener noreferrer">
+                            View on GitHub
+                        </a>
+                        <div class="packed-gallery">
+                            <img src="assets/images/gamedev/godot_animating.png" alt="Godot animating" loading="lazy">
+                            <img src="assets/images/gamedev/godot_thinker.png" alt="Godot thinker" loading="lazy">
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills</h2>
+            <p class="section-subtitle fade-in">Technologies and tools I work with</p>
+
+            <div class="skills-grid fade-in">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Languages</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <img src="assets/images/logos/Logo_C_sharp.svg.png" alt="C#" loading="lazy">
+                            <span class="tool-name">C#</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/java-logo.png" alt="Java" loading="lazy">
+                            <span class="tool-name">Java</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/Python-logo.svg.png" alt="Python" loading="lazy">
+                            <span class="tool-name">Python</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/JavaScript-logo.png" alt="JavaScript" loading="lazy">
+                            <span class="tool-name">JavaScript</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/PHP-logo.svg.png" alt="PHP" loading="lazy">
+                            <span class="tool-name">PHP</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/Sql.svg.png" alt="SQL" loading="lazy">
+                            <span class="tool-name">SQL</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/HTML5_logo_and_wordmark.svg.png" alt="HTML/CSS"
+                                loading="lazy">
+                            <span class="tool-name">HTML/CSS</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/Lua-Logo.svg.png" alt="Lua" loading="lazy">
+                            <span class="tool-name">Lua</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools & Software</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <img src="assets/images/logos/Git-Icon.png" alt="Git/GitHub" loading="lazy">
+                            <span class="tool-name">Git/GitHub</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/linux-tux-1-logo.png" alt="Linux" loading="lazy">
+                            <span class="tool-name">Linux</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/Visual_Studio_Code_1.35_icon.svg.png" alt="VSCode"
+                                loading="lazy">
+                            <span class="tool-name">VSCode</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/IntelliJ_IDEA_Icon.svg.png" alt="IntelliJ IDEA"
+                                loading="lazy">
+                            <span class="tool-name">IntelliJ IDEA</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/PhpStorm_Icon.svg.png" alt="PhpStorm" loading="lazy">
+                            <span class="tool-name">PhpStorm</span>
+                        </div>
+                        <div class="tool-card">
+                            <img src="assets/images/logos/eclipse-11-logo-png-transparent.png" alt="Eclipse IDE"
+                                loading="lazy">
+                            <span class="tool-name">Eclipse IDE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples of Work Section -->
+    <section id="work" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Examples of Work</h2>
+            <p class="section-subtitle fade-in">Presentations and projects showcasing my expertise</p>
+
+            <div class="work-grid fade-in">
+                <!-- Generative AI Presentation -->
+                <div class="work-card">
+                    <div class="work-header">
+                        <div class="work-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">Generative AI and Technology</h3>
+                            <p class="work-description">An exploration of generative AI technologies and their
+                                applications</p>
+                        </div>
+                    </div>
+                    <div class="work-embed">
+                        <div class="pdf-embed">
+                            <iframe src="assets/pdf/generative_ai_and_tech_nathaniel_power_0890207.pdf"
+                                title="Generative AI and Technology Presentation" loading="lazy">
+                                <p>Your browser doesn't support PDFs.
+                                    <a href="assets/pdf/generative_ai_and_tech_nathaniel_power_0890207.pdf" download>
+                                        Download the PDF
+                                    </a>
+                                </p>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="work-footer">
+                        <a href="assets/pdf/generative_ai_and_tech_nathaniel_power_0890207.pdf" class="work-download"
+                            download target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GitHub Presentation -->
+                <div class="work-card">
+                    <div class="work-header">
+                        <div class="work-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">GitHub Presentation</h3>
+                            <p class="work-description">A comprehensive guide to version control with GitHub</p>
+                        </div>
+                    </div>
+                    <div class="work-embed">
+                        <div class="pdf-embed">
+                            <iframe src="assets/pdf/GitHub Presentation.pdf" title="GitHub Presentation" loading="lazy">
+                                <p>Your browser doesn't support PDFs.
+                                    <a href="assets/pdf/GitHub Presentation.pdf" download>
+                                        Download the PDF
+                                    </a>
+                                </p>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="work-footer">
+                        <a href="assets/pdf/GitHub Presentation.pdf" class="work-download" download target="_blank"
+                            rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Resume</h2>
+            <p class="section-subtitle fade-in">My professional experience and qualifications</p>
+
+            <div class="resume-container fade-in">
+                <div class="resume-embed">
+                    <iframe src="assets/pdf/NathanielPower_Resume.pdf" title="Nathaniel Power Resume" loading="lazy">
+                        <p>Your browser doesn't support PDFs.
+                            <a href="assets/pdf/NathanielPower_Resume.pdf" download>
+                                Download the PDF
+                            </a>
+                        </p>
+                    </iframe>
+                </div>
+                <div class="resume-actions">
+                    <a href="assets/pdf/NathanielPower_Resume.pdf" class="btn btn-primary" download target="_blank"
+                        rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Awards & Recognition</h2>
+            <p class="section-subtitle fade-in">Achievements and competitions</p>
+
+            <div class="awards-grid fade-in">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <img src="assets/images/logos/uw_logo_small.webp" alt="University of Windsor" loading="lazy">
+                    </div>
+                    <div class="award-content">
+                        <h3 class="award-title">SSPC Competition</h3>
+                        <p class="award-organization">University of Windsor</p>
+                        <p class="award-description">
+                            Participated in the 18th and 19th Annual Secondary School Programming Competition.
+                            Selected to represent my school in both grade 11 and 12, competing in teams of three
+                            to solve complex programming problems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="award-card">
+                    <div class="award-icon">
+                        <img src="assets/images/logos/cemc_logo_small.png" alt="CEMC Logo" loading="lazy">
+                    </div>
+                    <div class="award-content">
+                        <h3 class="award-title">Canadian Computing Competition</h3>
+                        <p class="award-organization">University of Waterloo</p>
+                        <p class="award-description">
+                            Participated in the 2025 CCC, an individual competition testing problem-solving skills
+                            and algorithmic thinking. The competition challenged me to work independently
+                            without any external assistance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section / Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2 class="footer-title fade-in">Get In Touch</h2>
+            <p class="footer-subtitle fade-in">Let's connect and build something amazing together</p>
+
+            <div class="contact-content fade-in">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:nathaniel.power@example.com" class="contact-link">natrap2007@gmail.com</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/nathaniel-power-529a15400 " class="contact-link"
+                        target="_blank"
+                        rel="noopener noreferrer">https://www.linkedin.com/in/nathaniel-power-529a15400</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/natrapdev" class="contact-link" target="_blank"
+                        rel="noopener noreferrer">github.com/natrapdev</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
